@@ -23,18 +23,3 @@ def create_surname():
 
 
 
-
-
-
-# class Person:
-# 	def __init__(self):
-# 		#self.firstname = firstname
-# 		#self.lastname = lastname
-# 		pass
-
-
-# 	def firstname(self):
-# 		pass
-
-fullname = f'{create_name()} {create_surname()}'
-print(fullname)
