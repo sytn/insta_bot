@@ -1,12 +1,8 @@
+import string
 import random as rd
 
-with open('names.txt', encoding='utf-8') as f:
-	lines = []
-	for line in f:
-		lines.append(line)
-
-
-
-lines = [line.replace(' ', '') for line in lines]
-
-print(rd.choice(lines).lower())
+def create_pass(length=10, lower=string.ascii_lowercase, upper=string.ascii_uppercase, num=string.digits, symbols=string.punctuation):
+	xxx = lower + upper + num + symbols
+	temp = rd.sample(xxx, length)
+	password = "".join(temp)
+	return password
