@@ -12,7 +12,7 @@ lines = [line.replace(' ', '') for line in lines]
 
 
 
-#names = ["berkcan", "berk", "mert", "mertcan", "deniz", "cagri", "ibrahim"]
+
 
 def create_username(x=lines):
 	#username = f"{rd.choice(x)+str(rd.randint(0, 10))+str(rd.randint(0, 10))+str(rd.randint(0, 10))+str(rd.randint(0, 10))}"
