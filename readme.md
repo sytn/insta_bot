@@ -1,5 +1,6 @@
 ## Get temp mail addresses
 	-- https://tempail.com/tr/fake-mail/
+	-- getMail.py
 
 ## Get random profile pictures
 	-- https://thispersondoesnotexist.com/
