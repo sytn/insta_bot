@@ -1,21 +1,18 @@
-## Which programming language to use?
-	-- Python or Javascript
-
 ## Get temp mail addresses
 	-- https://tempail.com/tr/fake-mail/
 
 ## Get random profile pictures
 	-- https://thispersondoesnotexist.com/
-	-- profilePic.py or profilePic.py
+	-- profilePic.py
 
 ## Generate firstname and lastname
-	-- identity.py or identity.js
+	-- identity.py
 
 ## Generate username
-	-- username.py or username.js
+	-- username.py
 
 ## Generate password
-	-- password.py or password.js
+	-- password.py
 
 ## How to automate?
 	-- Get to the https://www.instagram.com/accounts/emailsignup/?hl=tr
