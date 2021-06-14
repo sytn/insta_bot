@@ -1,7 +1,7 @@
 import random as rd
 
 def create_name():
-	with open('names.txt', encoding='utf-8') as f:
+	with open(r'C:\Users\PC\Desktop\code\insta_bot\txtFiles\names.txt', encoding='utf-8') as f:
 		lines = []
 		for line in f:
 			lines.append(line)
@@ -12,7 +12,7 @@ def create_name():
 
 
 def create_surname():
-	with open('surnames.txt', encoding='utf-8') as f2:
+	with open(r'C:\Users\PC\Desktop\code\insta_bot\txtFiles\surnames.txt', encoding='utf-8') as f2:
 		lines2 = []
 		for line2 in f2:
 			lines2.append(line2)
@@ -23,3 +23,8 @@ def create_surname():
 
 
 
+def fullName(name=create_name(), surname=create_surname()):
+	return f'{name} {surname}'
+
+
+print(fullName())
