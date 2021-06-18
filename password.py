@@ -7,4 +7,3 @@ def create_pass(length=20, lower=string.ascii_lowercase, upper=string.ascii_uppe
 	password = "".join(temp)
 	return password
 
-print(create_pass())

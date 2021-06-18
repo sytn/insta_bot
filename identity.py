@@ -1,4 +1,7 @@
+#https://stackoverflow.com/questions/2659312/how-do-i-convert-a-numpy-array-to-and-display-an-image
 import random as rd
+from username import create_username
+from password import create_pass
 
 def create_name():
 	with open(r'C:\Users\PC\Desktop\code\Projects\insta_bot\txtFiles\names.txt', encoding='utf-8') as f:
@@ -27,4 +30,18 @@ def fullName(name=create_name(), surname=create_surname()):
 	return f'{name} {surname}'
 
 
-print(fullName())
+
+person = {
+	"firstname": create_name(),
+	"surname": create_surname(),
+	"username": create_username(),
+	"password": create_pass()
+}
+
+"""
+ToDo:
+1) Store user information on firebase
+2) Convert profile picture to numpy arrays and convert them back to img then display
+3) List all stored data from firebase
+"""
+

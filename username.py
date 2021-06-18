@@ -22,4 +22,3 @@ def create_username(x=lines):
 
 
 
-print(create_username())
