@@ -1,7 +1,7 @@
 import random as rd
 
 
-with open(r'C:\Users\PC\Desktop\code\insta_bot\txtFiles\names.txt', encoding='utf-8') as f:
+with open(r'C:\Users\PC\Desktop\code\Projects\insta_bot\txtFiles\names.txt', encoding='utf-8') as f:
 	lines = []
 	for line in f:
 		lines.append(line)

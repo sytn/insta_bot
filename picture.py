@@ -6,7 +6,7 @@ def get_pp():
 	filename = f'{create_name()}.png'
 	response = requests.get(url)
 
-	with open(f'C:/Users/PC/Desktop/code/insta_bot/img/{filename}', 'wb') as f:
+	with open(f'C:/Users/PC/Desktop/code/Projects/insta_bot/img/{filename}', 'wb') as f:
 		f.write(response.content)
 
 
