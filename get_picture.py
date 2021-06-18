@@ -10,7 +10,3 @@ def get_pp():
 		f.write(response.content)
 
 
-
-
-
-get_pp()
