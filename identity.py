@@ -57,9 +57,8 @@ with open('data.json', 'a') as outfile:
 
 """
 ToDo:
-1) Store user information on firebase
-2) Convert profile picture to numpy arrays and convert them back to img then display
-3) List all stored data from firebase
+1) Store user information on phpmyadmin
+2) List all stored data from phpmyadmin
 """
 
 """Converting IMG to ARRAY"""
@@ -71,3 +70,23 @@ ToDo:
 # image_array = np.array(image_sequence)
 # print(image_array)
 
+
+""" Connect to Phpmyadmin """
+
+import pymysql
+
+connection = pymysql.connect(host="localhost", user="root", passwd="", database="insta_bot")
+cursor = connection.cursor()
+
+deneme1 = "INSERT INTO users(firstname, lastname, username, password, email, profilePic) VALUES(1,1,1,1,1,1);"
+deneme2 = "SELECT * FROM users"
+
+cursor.execute(deneme1)
+cursor.execute(deneme2)
+
+rows = cursor.fetchall()
+for row in rows:
+	print(row)
+
+connection.commit()
+connection.close()
