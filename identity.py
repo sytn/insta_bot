@@ -5,6 +5,7 @@ from password import create_pass
 import requests
 import json
 import os
+import sys
 
 
 def create_name():
@@ -44,16 +45,9 @@ def get_pp():
 		f.write(response.content)
 
 
-person = {
-	"firstname": create_name(),
-	"surname": create_surname(),
-	"username": create_username(),
-	"password": create_pass()
-}
-
-with open('data.json', 'a') as outfile:
-	json.dump(person, outfile)
-	outfile.write('\n')
+# with open('data.json', 'a') as outfile:
+# 	json.dump(person, outfile)
+# 	outfile.write('\n')
 
 """
 ToDo:
@@ -71,22 +65,19 @@ ToDo:
 # print(image_array)
 
 
-""" Connect to Phpmyadmin """
+def create_person(firstname=create_name(), surname=create_surname(), username=create_username(), password=create_pass(), pp=get_pp()):
+	person = {
+		"firstname": firstname,
+		"surname": surname,
+		"username": username,
+		"password": password,
+		"pp": pp
+		}
+	return person
 
-import pymysql
 
-connection = pymysql.connect(host="localhost", user="root", passwd="", database="insta_bot")
-cursor = connection.cursor()
-
-deneme1 = "INSERT INTO users(firstname, lastname, username, password, email, profilePic) VALUES(1,1,1,1,1,1);"
-deneme2 = "SELECT * FROM users"
-
-cursor.execute(deneme1)
-cursor.execute(deneme2)
-
-rows = cursor.fetchall()
-for row in rows:
-	print(row)
-
-connection.commit()
-connection.close()
+a = int(sys.argv[1])
+x = 0
+while x<=a:
+	print(create_person()) 
+	x+=1
